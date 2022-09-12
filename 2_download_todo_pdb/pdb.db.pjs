@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "pdb.db",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "pdb",
+  "number-of-letters": 197481298,
+  "number-of-sequences": 731589,
+  "last-updated": "2022-09-12T18:29:00",
+  "number-of-volumes": 1,
+  "bytes-total": 306578567,
+  "bytes-to-cache": 204065688,
+  "files": [
+    "pdb.db.pdb",
+    "pdb.db.phr",
+    "pdb.db.pin",
+    "pdb.db.pot",
+    "pdb.db.psq",
+    "pdb.db.ptf",
+    "pdb.db.pto"
+  ]
+}
