@@ -31,39 +31,13 @@ class Database extends Config
      * @var array
      */
     public $default = [
-        'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
-        'DBDriver' => 'MySQLi',
-        'DBPrefix' => '',
-        'pConnect' => false,
-        'DBDebug'  => (ENVIRONMENT !== 'production'),
-        'charset'  => 'utf8',
-        'DBCollat' => 'utf8_general_ci',
-        'swapPre'  => '',
-        'encrypt'  => false,
-        'compress' => false,
-        'strictOn' => false,
-        'failover' => [],
-        'port'     => 3306,
-    ];
-
-    /**
-     * This database connection is used when
-     * running PHPUnit database tests.
-     *
-     * @var array
-     */
-    public $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
+        'hostname'    => 'localhost',
         'username'    => '',
         'password'    => '',
-        'database'    => ':memory:',
+        'database'    => WRITEPATH . 'db/database.sqlite',
         'DBDriver'    => 'SQLite3',
-        'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+        'DBPrefix'    => '', 
         'pConnect'    => false,
         'DBDebug'     => (ENVIRONMENT !== 'production'),
         'charset'     => 'utf8',
@@ -74,8 +48,34 @@ class Database extends Config
         'strictOn'    => false,
         'failover'    => [],
         'port'        => 3306,
-        'foreignKeys' => true,
     ];
+
+    /**
+     * This database connection is used when
+     * running PHPUnit database tests.
+     *
+     * @var array
+     */
+    // public $tests = [
+    //     'DSN'         => '',
+    //     'hostname'    => '127.0.0.1',
+    //     'username'    => '',
+    //     'password'    => '',
+    //     'database'    => WRITEPATH . 'db/database.sqlite',
+    //     'DBDriver'    => 'SQLite3',
+    //     'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+    //     'pConnect'    => false,
+    //     'DBDebug'     => (ENVIRONMENT !== 'production'),
+    //     'charset'     => 'utf8',
+    //     'DBCollat'    => 'utf8_general_ci',
+    //     'swapPre'     => '',
+    //     'encrypt'     => false,
+    //     'compress'    => false,
+    //     'strictOn'    => false,
+    //     'failover'    => [],
+    //     'port'        => 3306,
+    //     'foreignKeys' => true,
+    // ];
 
     public function __construct()
     {
