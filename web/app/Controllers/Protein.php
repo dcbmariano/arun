@@ -7,6 +7,15 @@ use CodeIgniter\I18n\Time;
  
 class Protein extends BaseController
 {
+    public function index($id){
+        $pm = new ProteinsModel();
+        $dados['id'] = $id;
+        // $id_aux = substr($id, 0, -1);
+
+        $dados['info'] = $pm->where('protein_id', $id)->find();
+
+        return view('protein',$dados);
+    }
     public function inserir(){
         $proteinsModel = new ProteinsModel();
 
@@ -19,10 +28,13 @@ class Protein extends BaseController
         dd($proteinsModel->findAll());
 
     }
+    
     public function show(){
+        // exibe todas as proteínas
         $proteinsModel = new ProteinsModel();
         dd($proteinsModel->findAll());
     }
+
     public function povoar_banco(){
         /* 
         *  Função responsável por povoar os dados do banco. 

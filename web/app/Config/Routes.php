@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/show', 'Protein::show');
 $routes->get('/povoarbanco', 'Protein::povoar_banco');
 $routes->get('/inserir', 'Protein::inserir');
+$routes->get('/protein/(:any)', 'Protein::index/$1');
 
 /*
  * --------------------------------------------------------------------

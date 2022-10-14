@@ -25,16 +25,12 @@
 </head>
 <body>
   <header>
-    <!-- loading -->
-    <div class="progress mb-1" style="height:2px;">
-        <div id="carrega-tabela" class="progress-bar" role="progressbar" style="width: 0%;"></div>
-    </div><!-- FIM loading -->
 
     <div class="container-fluid">
       <div class="row">
         
         <!-- logo -->
-        <div class="col-auto">
+        <div class="col-auto pt-3">
           <a href="<?=base_url()?>" title="Home">
             <!-- <img src="<?=''//base_url('/img/')?>" style="max-width:200px"> -->
 
@@ -52,6 +48,11 @@
       </div> <!-- FIM linha -->
     </div><!-- FIM container -->
   </header>
+
+    <!-- loading -->
+    <div class="progress mb-1" style="height:2px;">
+        <div id="carrega-tabela" class="progress-bar" role="progressbar" style="width: 0%;"></div>
+    </div><!-- FIM loading -->
   
   <main class="container-fluid my-3">
       <?= $this->renderSection('conteudo') ?> 
@@ -65,8 +66,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
+    <script src="<?=base_url('/js/3dmol.js')?>"></script><!-- principal script -->
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    
     <script src="<?=base_url('/js/main.js')?>"></script><!-- principal script -->
     <!-- FIM Scripts -->
   </footer>

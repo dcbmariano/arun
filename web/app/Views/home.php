@@ -20,7 +20,11 @@
             <tr>
                 <td><?=$protein['id']?></td>
                 <td><?=$protein['gi']?></td>
-                <td><?=$protein['protein_id']?></td>
+                <td>
+                    <a href="<?=base_url('/protein/'.$protein['protein_id'])?>">
+                        <?=$protein['protein_id']?>
+                    </a>
+                </td>
                 <td><?=$protein['location']?></td>
                 <td><?=$protein['protein_name']?></td>
                 <td><?=$protein['reference']?></td>
