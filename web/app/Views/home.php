@@ -21,7 +21,7 @@
                 <td><?=$protein['id']?></td>
                 <td><?=$protein['gi']?></td>
                 <td>
-                    <a href="<?=base_url('/protein/'.$protein['protein_id'])?>">
+                    <a href="<?=base_url('/index.php/protein/'.$protein['protein_id'])?>">
                         <?=$protein['protein_id']?>
                     </a>
                 </td>
