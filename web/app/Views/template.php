@@ -55,10 +55,73 @@
     </div><!-- FIM loading -->
   
   <main class="container-fluid my-3">
-      <?= $this->renderSection('conteudo') ?> 
+    <?= $this->renderSection('conteudo') ?> 
   </main>
 
   <footer>
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Laboratório de Bioinformática e Sistemas (LBS)</strong></p>
+          <p style="font-size: 12px"><strong>Universidade Federal de Minas Gerais</strong> <br>Av. P
+  res. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901 </p>
+          <p style="font-size: 12px">Instituto de Ciências Exatas (ICEx), Departamento de Ciência da
+  Computação (DCC)</p> 
+          <p style="font-size: 12px">Anexo U, 4º andar, Sala: 4340 | Telefone +55 31 3409-5896 | <a 
+  href="#" data-toggle="modal" data-target="#contato">Contato</a> </p>
+        </div>
+        <div class="col-md-6 right">
+          <br>
+          <div style="float:right; margin-bottom:20px"><a target="_blank" alt="DCC" href="http://dcc
+  .ufmg.br"><img src="<?=base_url();?>app/img/dcc.png"></a></div>
+          <div style="float:right; margin-bottom:20px"><a target="_blank" alt="UFMG" href="http://uf
+  mg.br"><img src="<?=base_url();?>app/img/ufmg.png"></a></div>
+          <div style="clear:both"></div>
+        
+        </div>
+      </div>
+                  
+    </div>
+	
+  </footer>
+  <div id="pos_footer">
+    ©<?php echo date('Y'); ?> LBS | Created by <a target="_blank" href="http://diegomariano.com">Diego Mariano</a> and
+  <a target="_blank" href="http://dcc.ufmg.br/~pmartins">Pedro Martins</a> | Maintained by <a href="#" data-toggle="modal" 
+  data-target="#lbs_team" >LBS I.T. team</a>.
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" tabindex="-1" id="lbs_team" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hid
+  den="true">&times;</span></button>
+          <h4 class="modal-title"><strong>LBS I.T. Team</strong></h4>
+        </div>
+              
+        <div class="modal-body">
+          <p style="text-align:center; padding:20px"><img src="<?=base_url();?>app/img/logo3.svg"></
+  p>
+          <h1 style="text-align:center">LBS I.T. TEAM</h1>						
+          <strong>Admin: </strong>Pedro Martins<br><br>
+
+          <h4>LBS website</h4>
+          <strong>Back-end: </strong>Pedro Martins<br>
+          <strong>Front-end/design: </strong>Diego Mariano<br>
+          <strong>Traducción (Español): </strong>Susana Medina<br>
+          <strong>Translation (English): </strong><br>
+
+        </div>
+              
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
@@ -73,6 +136,6 @@
     
     <script src="<?=base_url('/js/main.js')?>"></script><!-- principal script -->
     <!-- FIM Scripts -->
-  </footer>
+
 </body>
 </html>
