@@ -54,41 +54,40 @@
         <div id="carrega-tabela" class="progress-bar" role="progressbar" style="width: 0%;"></div>
     </div><!-- FIM loading -->
   
-  <main class="container-fluid my-3">
+  <main class="container-fluid py-4">
     <?= $this->renderSection('conteudo') ?> 
   </main>
 
-  <footer>
-    <div class="container">
-      
+  <footer class="bg-dark p-4 mt-4">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
-          <p><strong>Laboratório de Bioinformática e Sistemas (LBS)</strong></p>
-          <p style="font-size: 12px"><strong>Universidade Federal de Minas Gerais</strong> <br>Av. P
-  res. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901 </p>
+        <div class="col-md-6 text-start">
+          <h4 class="pb-2"><strong>Laboratório de Bioinformática e Sistemas (LBS)</strong></h4>
+          <p style="font-size: 12px"><strong>Universidade Federal de Minas Gerais</strong> <br>Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901 </p>
           <p style="font-size: 12px">Instituto de Ciências Exatas (ICEx), Departamento de Ciência da
   Computação (DCC)</p> 
           <p style="font-size: 12px">Anexo U, 4º andar, Sala: 4340 | Telefone +55 31 3409-5896 | <a 
-  href="#" data-toggle="modal" data-target="#contato">Contato</a> </p>
+  href="#" data-bs-toggle="modal" data-target="#contato" class="text-light">Contato</a> </p>
         </div>
-        <div class="col-md-6 right">
-          <br>
-          <div style="float:right; margin-bottom:20px"><a target="_blank" alt="DCC" href="http://dcc
-  .ufmg.br"><img src="<?=base_url();?>app/img/dcc.png"></a></div>
-          <div style="float:right; margin-bottom:20px"><a target="_blank" alt="UFMG" href="http://uf
-  mg.br"><img src="<?=base_url();?>app/img/ufmg.png"></a></div>
-          <div style="clear:both"></div>
+        <div class="col-md-3">
+          <a target="_blank" alt="DCC" href="http://dcc.ufmg.br">
+            <img src="<?=base_url('/img/dcc_w.svg');?>" class="w-100 p-4">
+          </a>
+        </div>
         
+        <div class="col-md-3">
+          <a target="_blank" alt="UFMG" href="http://ufmg.br">
+            <img src="<?=base_url('/img/ufmg_w.svg');?>" class="w-100 pt-4 p-2">
+          </a>
         </div>
       </div>
-                  
     </div>
-	
   </footer>
-  <div id="pos_footer">
-    ©<?php echo date('Y'); ?> LBS | Created by <a target="_blank" href="http://diegomariano.com">Diego Mariano</a> and
-  <a target="_blank" href="http://dcc.ufmg.br/~pmartins">Pedro Martins</a> | Maintained by <a href="#" data-toggle="modal" 
-  data-target="#lbs_team" >LBS I.T. team</a>.
+
+  <div id="pos_footer" class="text-center small text-dark p-1" style="position: relative; background: #a23737; font-size:0.6em">
+    <b>©<?php echo date('Y'); ?> LBS</b> | Created by <a target="_blank" href="http://diegomariano.com" class="text-dark"><b>Diego Mariano</b></a> and
+    <a target="_blank" href="http://dcc.ufmg.br/~pmartins" class="text-dark"><b>Pedro Martins</b></a> | Maintained by <a href="#" data-bs-toggle="modal" 
+    data-bs-target="#lbs_team" class="text-dark"><b>LBS I.T. team</b></a>.
   </div>
 
   <!-- MODAL -->
