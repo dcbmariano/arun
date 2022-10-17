@@ -58,33 +58,45 @@
     <?= $this->renderSection('conteudo') ?> 
   </main>
 
-  <footer class="bg-dark p-4 mt-4">
+  <footer class="bg-dark py-4 mt-4">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 text-start">
-          <h4 class="pb-2"><strong>Laboratório de Bioinformática e Sistemas (LBS)</strong></h4>
-          <p style="font-size: 12px"><strong>Universidade Federal de Minas Gerais</strong> <br>Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901 </p>
-          <p style="font-size: 12px">Instituto de Ciências Exatas (ICEx), Departamento de Ciência da
-  Computação (DCC)</p> 
-          <p style="font-size: 12px">Anexo U, 4º andar, Sala: 4340 | Telefone +55 31 3409-5896 | <a 
-  href="#" data-bs-toggle="modal" data-target="#contato" class="text-light">Contato</a> </p>
+        <div class="col-md-6 text-start col-12">
+
+          <div class="row">
+            <div style="width: 100px;" class="me-2">
+              <img src="<?=base_url('/img/lbs.svg')?>" class="opacity-50" style="width:100px">
+            </div>
+            <div class="col">
+              <!-- descrição -->
+              <h5 class="py-2"><strong>Laboratório de Bioinformática e Sistemas (LBS)</strong></h5>
+              <p>
+                <strong>Universidade Federal de Minas Gerais (UFMG), Brazil</strong><br>
+                <span class="small">Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901 | Instituto de Ciências Exatas (ICEx), Departamento de Ciência da Computação (DCC)</span> 
+              </p>
+              <p class="small">Anexo U, 4º andar, Sala: 4340 | +55 31 3409-5896 | bioinfo.dcc.ufmg[at]gmail.com</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-3 col-12 text-end">
+          <a target="_blank" alt="UFMG" href="http://ufmg.br">
+            <img src="<?=base_url('/img/ufmg_w.svg');?>" class="pt-4" width="250">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-12">
           <a target="_blank" alt="DCC" href="http://dcc.ufmg.br">
-            <img src="<?=base_url('/img/dcc_w.svg');?>" class="w-100 p-4">
+            <img src="<?=base_url('/img/dcc_w.svg');?>" class="p-4" width="250">
           </a>
         </div>
         
-        <div class="col-md-3">
-          <a target="_blank" alt="UFMG" href="http://ufmg.br">
-            <img src="<?=base_url('/img/ufmg_w.svg');?>" class="w-100 pt-4 p-2">
-          </a>
-        </div>
+        
       </div>
     </div>
   </footer>
 
-  <div id="pos_footer" class="text-center small text-dark p-1" style="position: relative; background: #a23737; font-size:0.6em">
+  <div id="pos_footer" class="text-center small text-dark py-1 px-4" style="position: relative; background: #a23737; font-size:0.6em">
     <b>©<?php echo date('Y'); ?> LBS</b> | Created by <a target="_blank" href="http://diegomariano.com" class="text-dark"><b>Diego Mariano</b></a> and
     <a target="_blank" href="http://dcc.ufmg.br/~pmartins" class="text-dark"><b>Pedro Martins</b></a> | Maintained by <a href="#" data-bs-toggle="modal" 
     data-bs-target="#lbs_team" class="text-dark"><b>LBS I.T. team</b></a>.
