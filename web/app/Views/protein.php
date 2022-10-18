@@ -49,16 +49,7 @@
   </div>
 
   <div class="col-4">
-  <table>
-        <tr>
-            <!-- <p>ID: <?=@$info[0]['id']?></p> -->
-            <!-- <p>Protein name: <?=@$info[0]['protein_name']?></p> -->
-            <p><b>GI:</b> <label class="badge bg-warning"><?=@$info[0]['gi']?></label></p>
-            <!-- <p>Protein ID: <?=@$info[0]['protein_id']?></p> -->
-            <p><b>Location:</b> <?=@$info[0]['location']?></p>
-            <p><b>Reference:</b> <?=@$info[0]['reference']?></p>
-            <hr>
-        </tr>
+    <table>
         <tr>
             <td style="text-align:right; padding:12px 10px">
                 <label class="badge bg-dark">Show as:</label>
@@ -119,7 +110,16 @@
                     
             </td>
         </tr>
+        
     </table>
+
+    <hr>
+    <p><b>GI:</b> <label class="badge bg-warning"><?=@$info[0]['gi']?></label></p>
+    <!-- <p>Protein ID: <?=@$info[0]['protein_id']?></p> -->
+    <p><b>Location:</b> <?=@$info[0]['location']?></p>
+    <p><b>Reference:</b> <?=@$info[0]['reference']?></p>
+    <code id="seq" class="text-muted" style="font-size: 0.7em;"></code>
+
   </div>
 </div>
 
