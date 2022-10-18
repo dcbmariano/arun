@@ -29,7 +29,7 @@ function main(id){
 
 	/* Load PDB and summary */
 	readPDB(id);
-	// readSummary(id);
+	readSummary(id);
 
 }
 
@@ -37,14 +37,14 @@ function main(id){
 
 /* Load summary */
 function readSummary(id){
-	var txt = frontend+"data/reports/"+id+".htm";
-
-	/*
-	$.post(txt, function(d) {
-		$("#summary_info").text(txt+"\n\n"+d);
+	let id2 = id.substr(0, id.length - 1) + '.1'
+	let txt = frontend+"/data/fasta/"+id2+".fasta";
+	console.log(txt)
+	$.post(txt, (d)=>{
+		$("#seq").text(d);
 	});
-	*/
-	var obj = document.getElementById('summary_report');
+	
+	const obj = document.getElementById('seq');
 	obj.src = txt;	
 
 }
@@ -110,7 +110,7 @@ var atomcallback = function(atom, viewer) {
 /* Reading PDB */
 function readPDB(id){
 	let id_aux = id.substr(0,id.length-1);
-	let txt = frontend+"/data/"+id_aux+".pdb";
+	let txt = frontend+"/data/modeller/"+id_aux+".pdb";
 
 	$.post(txt, function(d) {
 		moldata = data = d;
