@@ -27,7 +27,7 @@
   <header>
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row justify-content-between">
         
         <!-- logo -->
         <div class="col-auto pt-3">
@@ -41,8 +41,8 @@
         </div><!-- FIM logo -->
         
         <!-- buscar licitante -->
-        <div class="col">
-          
+        <div class="col-2 pt-4">
+          <a href="<?=base_url('/data/alldata.zip')?>" class="btn btn-info btn-sm">Download all database (305MB)</a>
         </div><!-- FIM buscar licitante -->
 
       </div> <!-- FIM linha -->

@@ -31,6 +31,7 @@ function main(id){
 	readPDB(id);
 	readSummary(id);
 
+
 }
 
 
@@ -283,8 +284,17 @@ function infoTitle(id){
 	$(".name_organism").text(org);
 }
 
+const ativa_tooltips = () => {
+    // FUNÇÃO que ativa os tooltips => descrições dos títulos
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+}
+
+ativa_tooltips();
 
 
 // executa
 main(id);
+

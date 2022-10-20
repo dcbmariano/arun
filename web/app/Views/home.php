@@ -31,7 +31,7 @@
         <div class="card btn btn-outline-secondary p-0 text-start">
           <div class="card-body">
             <h6 class="card-subtitle mb-3 small">Hypothetical proteins
-              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-label="Total: 185 hypothetical proteins (redundant)"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
+              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-bs-label="Total: 185 hypothetical proteins (redundant)"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
             </h6>
             <div class="d-flex align-items-end justify-content-between mt-2">
               <div>
