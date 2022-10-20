@@ -10,7 +10,7 @@ a{color:#434857;}
 #menu{ margin-top:20px; }
 #menu_interno{ padding:5px 10px; color:#333; }
 #principal{ margin-top:30px; }
-#pdb { width: 100%; height: 600px; position: relative;}
+#pdb,#pdb2 { width: 100%; height: 600px; position: relative;}
 
 
 /* Class */

@@ -9,25 +9,59 @@
     
 	<span class="badge bg-success" id=""><?=$id?></span>			
 	
-    <h1>
-        <?=@$info[0]['protein_name']?>
-        <a href="#summary" class="sub_menu" data-bs-toggle="modal" data-bs-target="#summary">
-            <i class="bi bi-file-text-fill" title="summary"></i>
-        </a>
+    <div class="row">
+    
+        <div class="col-9">
+            <h1>
+                <?=@$info[0]['protein_name']?>
+                <a href="#summary" class="sub_menu" data-bs-toggle="modal" data-bs-target="#summary">
+                    <i class="bi bi-file-text-fill" title="summary"></i>
+                </a>
+            </h1>
+        </div>
 
-        <p style="color:#434857;font-size:12px; text-align:right" id="idModel"></p>
+        <div class="col-3">
+            <div class="dropdown text-end">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Download
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a target="_blank" class="dropdown-item" href='<?=base_url("/data/fasta/$id.fasta")?>'>FASTA</a></li>
+                    <li><a target="_blank" class="dropdown-item" href='<?=base_url("/data/modeller/$id_modeller.pdb")?>'>PDB model (Modeller)</a></li>
+                    <li><a target="_blank" class="dropdown-item" href='<?=base_url("/data/alphafold/pdb/$id_aux.pdb")?>'>PDB model (Alphafold)</a></li>
+                </ul>
+            </div>
+        </div>
 
         <!--MODAL summary -->
         <div style="color:#333" class="modal fade" id="summary" tabindex="-1" role="dialog" aria-labelledby="summary">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">						      	
-                        <h3>Summary: <span class="name_organism"></span></h3>
+                        <h3>Modeling details: <span class="name_organism"></span></h3>
                     </div>
         
                     <div id="summary_info">
                         <div class="modal-body">
-                            <!-- <iframe src="" id="summary_report" style="width:100%;height:500px"></iframe> -->
+                            <div id="coverage">
+                                <img src="<?=base_url("/data/alphafold/coverage/$id_aux.png")?>" class="img-fluid">
+                            </div>
+                            <div id="iddt">
+                                <img src="<?=base_url("/data/alphafold/iddt/$id_aux.png")?>" class="img-fluid">
+                            </div>
+                            <div id="pae">
+                                <img src="<?=base_url("/data/alphafold/pae/$id_aux.png")?>" class="img-fluid">
+                            </div>
+
+                            <h5 class="mt-5 pb-2">Cite:</h5>
+        
+                            <div style="font-size: 12px;" class="text-muted">
+                                <p>JUMPER, J. et al. Highly accurate protein structure prediction with AlphaFold. Nature, 2021. </p>
+                                <p>MIRDITA, M. et al. Uniclust databases of clustered and deeply annotated protein sequences and alignments. Nucleic Acids Res., v. 45, n. D1, p. D170–D176, 2017. </p>
+                                <p>MIRDITA, M. et al. ColabFold: Making Protein folding accessible to all. Nature Methods, 2022. </p>
+                                <p>MIRDITA, M.; STEINEGGER, M.; S"ODING, J. MMseqs2 desktop and local web server app for fast, interactive sequence searches. Bioinformatics, v. 35, n. 16, p. 2856–2858, 2019.</p> 
+                                <p>MITCHELL, A. L. et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids Res., 2019. </p>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -37,7 +71,7 @@
             </div>
         </div>
         <!-- FIM MODALS -->
-    </h1>
+    </div>
   </div>
 </div>
 
@@ -45,7 +79,27 @@
 <div class="row">
   <!-- coluna de  -->
   <div class="col-8">
-    <div id="pdb"></div>
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true" onclick="readPDB('<?=$id_aux?>');">Alphafold</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="readPDB_MODELLER('<?=$id_aux?>');">Modeller</button>
+    </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+            <div id="pdb"></div>
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div id="pdb2"></div>
+        </div>
+    </div>
+
+    
   </div>
 
   <div class="col-4">

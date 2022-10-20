@@ -10,8 +10,8 @@ class Protein extends BaseController
     public function index($id){
         $pm = new ProteinsModel();
         $dados['id'] = $id;
-        // $id_aux = substr($id, 0, -1);
-
+        $dados['id_aux'] = substr($id, 0, -2).'1';
+        $dados['id_modeller'] = substr($id, 0, -2);
         $dados['info'] = $pm->where('protein_id', $id)->find();
 
         return view('protein',$dados);

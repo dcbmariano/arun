@@ -110,7 +110,7 @@ var atomcallback = function(atom, viewer) {
 /* Reading PDB */
 function readPDB(id){
 	let id_aux = id.substr(0,id.length-1);
-	let txt = frontend+"/data/modeller/"+id_aux+".pdb";
+	let txt = frontend+"/data/alphafold/pdb/"+id+".pdb";
 
 	$.post(txt, function(d) {
 		moldata = data = d;
@@ -143,6 +143,45 @@ function readPDB(id){
 	})
     .fail(function() {
         document.querySelector("#pdb").innerHTML = `<p>This model is not available now. You can check this example: <a href="${frontend}/protein/WP_010881472">WP_010881472</a>.</p>`;
+    })
+}
+
+/* Reading PDB */
+function readPDB_MODELLER(id){
+	let id_aux = id.substr(0,id.length-1);
+	let txt = frontend+"/data/modeller/"+id_aux+".pdb";
+	console.log(txt)
+	$.post(txt, function(d) {
+		moldata = data = d;
+
+		/* Creating visualization */
+		glviewer = $3Dmol.createViewer("pdb2", {
+			defaultcolors : $3Dmol.rasmolElementColors
+		});
+
+		/* Color background */
+		glviewer.setBackgroundColor('white');
+
+		receptorModel = m = glviewer.addModel(data, "pqr");
+
+		/* Type of visualization */
+		glviewer.setStyle({},{cartoon:{color:'spectrum'}}); /* Cartoon multi-color */
+		/*glviewer.addSurface($3Dmol.SurfaceType, {opacity:0.3});  Surface */
+
+		/* Name of the atoms */
+		atoms = m.selectedAtoms({});
+		for ( var i in atoms) {
+			var atom = atoms[i];
+			atom.clickable = true;
+			atom.callback = atomcallback;
+		}
+
+		glviewer.mapAtomProperties($3Dmol.applyPartialCharges);
+		glviewer.zoomTo();
+		glviewer.render();
+	})
+    .fail(function() {
+        document.querySelector("#pdb2").innerHTML = `<p>This model is not available now. You can check this example: <a href="${frontend}/protein/WP_010881472">WP_010881472</a>.</p>`;
     })
 }
 
