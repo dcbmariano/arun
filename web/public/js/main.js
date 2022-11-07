@@ -1,5 +1,13 @@
 $(document).ready( function () {
-    $('#protein_table').DataTable();
+    $('#protein_table').DataTable(
+		{
+		
+            dom: 'Bfrtip',
+            "buttons": [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+		}
+	);
 } );
 
 

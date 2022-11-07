@@ -11,11 +11,11 @@
         <div class="card btn btn-outline-secondary p-0 text-start">
           <div class="card-body ">
             <h6 class="card-subtitle mb-3 small">Genes/Proteins (non-redundant)
-              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-label="Total: 819 genes/proteins (redundant)"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
+              <a href="#" class="card-link" data-bs-toggle="tooltip" title="482 non-redundant proteins. The table below can present redundant proteins ID."><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
             </h6>
             <div class="d-flex align-items-end justify-content-between mt-2">
               <div>
-                <h5 class="card-title" id="total_licitacoes">484
+                <h5 class="card-title" id="total_licitacoes">482
                   <!-- <div class="spinner-grow  spinner-grow-sm text-secondary" role="status"><span class="visually-hidden">3</span></div> -->
                 </h5>
               </div>
@@ -31,11 +31,11 @@
         <div class="card btn btn-outline-secondary p-0 text-start">
           <div class="card-body">
             <h6 class="card-subtitle mb-3 small">Hypothetical proteins
-              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-bs-label="Total: 185 hypothetical proteins (redundant)"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
+              <a href="#" class="card-link" data-bs-toggle="tooltip" title="173 non-redundant. Total: 282 hypothetical proteins (redundant)"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
             </h6>
             <div class="d-flex align-items-end justify-content-between mt-2">
               <div>
-                <h5 class="card-title" id="licitacoes_com_alertas">132
+                <h5 class="card-title" id="licitacoes_com_alertas">173
                   <!-- <div class="spinner-grow  spinner-grow-sm text-secondary" role="status"><span class="visually-hidden">3</span></div> -->
                 </h5>
               </div>
@@ -50,8 +50,8 @@
       <div class="col-6 col-md-3">
         <div class="card btn btn-outline-secondary p-0 text-start">
           <div class="card-body">
-            <h6 class="card-subtitle mb-3 small">Pathogenic island
-              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-label=""><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
+            <h6 class="card-subtitle mb-3 small">Genomic islands
+              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-label="" title="8 GENOMIC ISLAND + 4 PATHOGENICITY ISLAND"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
             </h6>
             <div class="d-flex align-items-end justify-content-between mt-2">
 
@@ -72,7 +72,7 @@
         <div class="card btn btn-outline-secondary p-0 text-start">
           <div class="card-body">
             <h6 class="card-subtitle mb-3 small">Genomes
-              <a href="#" class="card-link" data-bs-toggle="tooltip" aria-label=""><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
+              <a href="#" class="card-link" data-bs-toggle="tooltip" title="Three genomes of Treponema pallidum strains: Nichols, SamoaD, and BosniaD"><i class="bi bi-question-circle-fill text-secondary" style="text-shadow: 0px 0px 5px #FFF;"></i></a>
             </h6>
             <div class="d-flex align-items-end justify-content-between mt-2">
 

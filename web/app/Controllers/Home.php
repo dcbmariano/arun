@@ -12,4 +12,14 @@ class Home extends BaseController
 
         return view('home', $dados);
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function download()
+    {
+        return view('download');
+    }
 }

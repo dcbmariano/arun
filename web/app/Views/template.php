@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathogenic island</title>
+  <title>Genomic island of Treponema pallidum database</title>
 
-  <link rel="shortcut icon" href="<?=base_url('/img/logo_v6.svg')?>">
-  
+  <link rel="shortcut icon" href="<?=base_url('/img/favicon.png')?>">
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="<?=base_url('/css/buttons.datatables.min.css')?>">
+
   <link rel="stylesheet" href="<?=base_url('/css/estilo.css')?>">
 
   <!-- jQuery -->
@@ -24,29 +27,18 @@
 
 </head>
 <body>
-  <header>
+  <header class="">
+    <div class="container-fluid d-flex flex-wrap justify-content-center">
+      <a href="<?=base_url()?>" title="Home" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
+        <img src="<?=base_url('/img/gitpdb_w.svg')?>" width="300">
+      </a>
 
-    <div class="container-fluid">
-      <div class="row justify-content-between">
-        
-        <!-- logo -->
-        <div class="col-auto pt-3">
-          <a href="<?=base_url()?>" title="Home">
-            <!-- <img src="<?=''//base_url('/img/')?>" style="max-width:200px"> -->
-
-            <h3 class="mb-0">Genomic island</h3>
-            <em class="small">Treponema pallidum</em></h3>
-
-          </a>
-        </div><!-- FIM logo -->
-        
-        <!-- buscar licitante -->
-        <div class="col-2 pt-4">
-          <a href="<?=base_url('/data/alldata.zip')?>" class="btn btn-info btn-sm">Download all database (305MB)</a>
-        </div><!-- FIM buscar licitante -->
-
-      </div> <!-- FIM linha -->
-    </div><!-- FIM container -->
+      <ul class="nav nav-pills pt-4">
+      <li class="nav-item px-3"><a href="<?=base_url('/about')?>" class="nav-link link-light">About</a></li>
+        <li class="nav-item px-3"><a href="<?=base_url()?>" class="nav-link link-light">Proteins</a></li>
+        <li class="nav-item px-3"><a href="<?=base_url('/download')?>" class="nav-link link-light">Download</a></li>
+      </ul>
+    </div>
   </header>
 
     <!-- loading -->
@@ -141,10 +133,20 @@
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
 
+
     <script src="<?=base_url('/js/3dmol.js')?>"></script><!-- principal script -->
 
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    
+
+    <script src="<?=base_url('/js/dataTables.buttons.min.js')?>"></script>
+    <script src="<?=base_url('/js/buttons.html5.min.js')?>"></script>
+    <script src="<?=base_url('/js/buttons.print.min.js')?>"></script>
+    <script src="<?=base_url('/js/jszip.min.js')?>"></script>
+    <script src="<?=base_url('/js/pdfmake.min.js')?>"></script>
+    <script src="<?=base_url('/js/vfs_fonts.js')?>"></script>
+
+
+
     <script src="<?=base_url('/js/main.js')?>"></script><!-- principal script -->
     <!-- FIM Scripts -->
 
